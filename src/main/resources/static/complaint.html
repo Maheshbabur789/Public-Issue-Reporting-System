@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Complaint | IssuePortal</title>
+  <link rel="stylesheet" href="complaint.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">IssuePortal</div>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    
+    <span class="nav-user">👤 <span id="navUserName">User</span></span>
+    <a href="login.html" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="page-container">
+
+  <form id="complaintForm" novalidate>
+
+    <div class="form-header">
+      <h2>Submit New Complaint</h2>
+      <p>Help improve your community by reporting public issues.</p>
+    </div>
+
+    <div class="form-grid">
+
+      <div class="input-group">
+        <label>Complaint Title <span class="required">*</span></label>
+        <input type="text" id="title" placeholder="Enter complaint title" maxlength="100">
+        <span class="error-msg" id="titleError"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Category <span class="required">*</span></label>
+        <select id="category">
+          <option value="">Select Category</option>
+          <option>Road Damage</option>
+          <option>Water Supply</option>
+          <option>Street Light</option>
+          <option>Garbage</option>
+          <option>Drainage</option>
+          <option>Electricity</option>
+          <option>Traffic</option>
+          <option>Public Safety</option>
+          <option>Other</option>
+        </select>
+        <span class="error-msg" id="categoryError"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Priority</label>
+        <select id="priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+          <option>Emergency</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Department</label>
+        <select id="department">
+          <option>Municipal Corporation</option>
+          <option>Roads & Buildings</option>
+          <option>Water Department</option>
+          <option>Electricity Department</option>
+          <option>Traffic Police</option>
+          <option>Sanitation Department</option>
+        </select>
+      </div>
+
+      <div class="input-group full-width">
+        <label>Description <span class="required">*</span></label>
+        <textarea id="description" rows="5" placeholder="Describe the issue in detail... (min 20 characters)" maxlength="1000"></textarea>
+        <span class="char-count" id="descCount">0 / 1000</span>
+        <span class="error-msg" id="descriptionError"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Location <span class="required">*</span></label>
+        <input type="text" id="location" placeholder="Area / Street Name">
+        <span class="error-msg" id="locationError"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Landmark</label>
+        <input type="text" id="landmark" placeholder="Near Landmark (optional)">
+      </div>
+
+      <div class="input-group">
+        <label>Mobile Number <span class="required">*</span></label>
+        <div class="phone-input">
+          <span class="phone-prefix">+91</span>
+          <input type="tel" id="mobileNumber" placeholder="Enter 10-digit mobile number" maxlength="10">
+        </div>
+        <span class="error-msg" id="mobileError"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Upload Image <span class="optional">(optional)</span></label>
+        <input type="file" id="image" accept="image/*">
+        <span class="error-msg" id="imageError"></span>
+      </div>
+
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Complaint</button>
+
+    <div id="message"></div>
+
+  </form>
+
+</div>
+
+<footer class="page-footer">
+  <h3>IssuePortal</h3>
+  <p>Smart Public Issue Reporting System</p>
+  <p>© 2026 IssuePortal. All Rights Reserved.</p>
+</footer>
+
+<script src="complaint.js"></script>
+</body>
+</html>

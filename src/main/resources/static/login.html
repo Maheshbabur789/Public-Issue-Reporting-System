@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | IssuePortal</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- LEFT -->
+    <section class="left">
+        <div class="brand">
+            <span class="badge">Public Service Platform</span>
+            <h1>IssuePortal</h1>
+
+            <p class="tagline">Report. Track. Resolve.</p>
+
+            <p class="subtitle">
+                A smart and efficient platform to report, monitor, and resolve public issues seamlessly.
+            </p>
+
+            <ul class="features">
+                <li>✔ Fast issue submission</li>
+                <li>✔ Real-time tracking</li>
+                <li>✔ Transparent resolution</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- RIGHT -->
+    <section class="right">
+        <div class="card">
+            <h2>Welcome back</h2>
+            <p class="muted">Sign in to your account</p>
+
+            <form id="loginForm">
+
+                <!-- Email -->
+                <div class="floating">
+                    <input type="email" id="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <!-- Password -->
+                <div class="floating password-box">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                    <span class="toggle" onclick="togglePassword()">👁</span>
+                </div>
+
+                <!-- Forgot Password -->
+                <div class="forgot-password">
+                    <a href="forgot-password.html">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <p class="extra">
+                    Don’t have an account?
+                    <a href="register.html">Create one</a>
+                </p>
+
+            </form>
+
+            <div id="message"></div>
+
+            <!-- FOOTER -->
+            <div class="login-footer">
+                <p>© <span id="year"></span> IssuePortal</p>
+                <p class="sub">All rights reserved · Built for Smart Governance</p>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<script src="login.js"></script>
+
+<script>
+document.getElementById("year").innerText = new Date().getFullYear();
+</script>
+
+</body>
+</html>

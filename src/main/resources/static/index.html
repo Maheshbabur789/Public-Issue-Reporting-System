@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IssuePortal — Smart Issue Reporting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="ip-nav">
+  <div class="ip-nav-logo">Issue<span>Portal</span></div>
+  <nav class="ip-nav-links">
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="#" onclick="checkLogin()">Submit</a>
+    <a href="#">Track</a>
+  </nav>
+  <div class="ip-nav-right">
+    <a href="login.html" class="ip-nav-login">Login</a>
+    <a href="#" onclick="checkLogin()" class="ip-nav-cta">Get Started</a>
+  </div>
+  <button class="ip-hamburger" onclick="toggleMenu()">&#9776;</button>
+</header>
+
+<div class="ip-mobile-nav" id="mobileNav">
+  <a href="#">Home</a>
+  <a href="#features">Features</a>
+  <a href="#" onclick="checkLogin()">Submit</a>
+  <a href="#">Track</a>
+  <a href="login.html">Login</a>
+</div>
+
+<section class="ip-hero">
+  <div class="ip-hero-bg"></div>
+  <div class="ip-hero-inner">
+    <div class="ip-hero-eyebrow">Civic Tech Platform</div>
+    <h1>Report Issues.<br><em>Transform Cities.</em></h1>
+    <p class="ip-hero-sub">Give citizens a voice. Give governments clarity. IssuePortal connects communities with the institutions that serve them — in real time.</p>
+    <div class="ip-hero-btns">
+      <a href="#" onclick="checkLogin()" class="ip-btn-main">Submit an Issue</a>
+      <a href="#features" class="ip-btn-ghost">See How It Works</a>
+    </div>
+    <div class="ip-hero-meta">
+      <div class="ip-meta-pill">10,000+ Citizens</div>
+      <div class="ip-meta-pill">80% Resolution Rate</div>
+      <div class="ip-meta-pill">Real-time Updates</div>
+      <div class="ip-meta-pill">Secure & Encrypted</div>
+    </div>
+  </div>
+</section>
+
+<div class="ip-strip">
+  <span class="ip-strip-label">Trusted across</span>
+  <span class="ip-strip-item">Municipal Corps</span>
+  <span class="ip-strip-item">City Councils</span>
+  <span class="ip-strip-item">Public Works</span>
+  <span class="ip-strip-item">Urban Districts</span>
+</div>
+
+<section class="ip-features" id="features">
+  <div class="ip-section-tag">Platform Features</div>
+  <h2 class="ip-section-h">Built for transparency,<br><em>designed for action</em></h2>
+  <p class="ip-section-p">Every feature closes the gap between a problem reported and a problem solved.</p>
+  <div class="ip-feat-grid">
+    <div class="ip-feat-card">
+      <div class="ip-feat-icon ip-feat-icon-light">⚡</div>
+      <h3>Smart Reporting</h3>
+      <p>Guided, structured submission ensures every report has the right information — no back-and-forth needed.</p>
+    </div>
+    <div class="ip-feat-card ip-feat-card-dark">
+      <div class="ip-feat-icon ip-feat-icon-dark">📊</div>
+      <h3>Live Tracking</h3>
+      <p>Watch your issue move in real time. Every status is logged, timestamped, and visible to you instantly.</p>
+    </div>
+    <div class="ip-feat-card">
+      <div class="ip-feat-icon ip-feat-icon-light">🔒</div>
+      <h3>Secure & Private</h3>
+      <p>Your identity is protected. Reports are encrypted and your data is never sold or shared with third parties.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ip-stats">
+  <div class="ip-stats-grid">
+    <div class="ip-stat">
+      <div class="ip-stat-num">10<span>K+</span></div>
+      <div class="ip-stat-label">Issues Reported</div>
+    </div>
+    <div class="ip-stat">
+      <div class="ip-stat-num">8<span>K+</span></div>
+      <div class="ip-stat-label">Issues Resolved</div>
+    </div>
+    <div class="ip-stat">
+      <div class="ip-stat-num">80<span>%</span></div>
+      <div class="ip-stat-label">Resolution Rate</div>
+    </div>
+    <div class="ip-stat">
+      <div class="ip-stat-num">5<span>K+</span></div>
+      <div class="ip-stat-label">Active Citizens</div>
+    </div>
+  </div>
+</section>
+
+<section class="ip-process">
+  <div class="ip-process-header">
+    <div class="ip-section-tag">How It Works</div>
+    <h2 class="ip-section-h">From report<br>to <em>resolution</em></h2>
+  </div>
+  <div class="ip-process-steps">
+    <div class="ip-step">
+      <div class="ip-step-num">01</div>
+      <div class="ip-step-body">
+        <div class="ip-step-badge">Submit</div>
+        <h3>Describe the Problem</h3>
+        <p>Log in and submit your issue — pothole, broken light, water leak — with location, category, and photos.</p>
+      </div>
+    </div>
+    <div class="ip-step">
+      <div class="ip-step-num">02</div>
+      <div class="ip-step-body">
+        <div class="ip-step-badge">Route</div>
+        <h3>Automatic Department Routing</h3>
+        <p>IssuePortal routes your report to the right team instantly. No wrong numbers. No manual triaging.</p>
+      </div>
+    </div>
+    <div class="ip-step">
+      <div class="ip-step-num">03</div>
+      <div class="ip-step-body">
+        <div class="ip-step-badge">Resolve</div>
+        <h3>Track & Get Notified</h3>
+        <p>Follow your issue in real time. You'll know when it's assigned, when work begins, and when it's closed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ip-cta">
+  <div class="ip-cta-box">
+    <div class="ip-cta-glow"></div>
+    <h2>Your city works better<br>when <em>you speak up.</em></h2>
+    <p>Join thousands of citizens shaping better communities through transparent, accountable reporting.</p>
+    <div class="ip-cta-pills">
+      <span class="ip-cta-pill">10,000+ Issues Reported</span>
+      <span class="ip-cta-pill">80% Resolution Rate</span>
+      <span class="ip-cta-pill">Trusted by Citizens</span>
+    </div>
+    <a href="#" onclick="checkLogin()" class="ip-btn-main">Report an Issue Now</a>
+  </div>
+</section>
+
+<footer class="ip-footer">
+  <div class="ip-footer-logo">Issue<span>Portal</span></div>
+  <p class="ip-footer-copy">© <span id="year"></span> IssuePortal. All rights reserved.</p>
+  <div class="ip-footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

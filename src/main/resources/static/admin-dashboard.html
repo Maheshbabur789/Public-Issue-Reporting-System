@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | IssuePortal</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <span class="logo-icon">⚡</span> IssuePortal
+    <span class="admin-badge">ADMIN</span>
+  </div>
+  <div class="nav-links">
+    <a href="admin-dashboard.html" class="active">📊 Dashboard</a>
+    <a href="manage-complaints.html">📋 Complaints</a>
+    <a href="manage-users.html">👥 Users</a>
+    <div class="admin-profile">
+      <div class="avatar" id="adminAvatar">A</div>
+      <div class="admin-info">
+        <span id="adminName">Admin</span>
+        <small id="adminEmail">admin@email.com</small>
+      </div>
+    </div>
+    <a href="#" class="logout-link" onclick="logout()">🚪 Logout</a>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div>
+      <h1>Admin Dashboard</h1>
+      <p>Monitor, manage and resolve public complaints efficiently.</p>
+    </div>
+    <div class="header-date" id="currentDate"></div>
+  </div>
+
+  <!-- Statistics -->
+  <div class="stats">
+
+    <div class="stat-card total">
+      <div class="stat-icon">📁</div>
+      <div class="stat-info">
+        <h2 id="totalComplaints">0</h2>
+        <p>Total Complaints</p>
+      </div>
+    </div>
+
+    <div class="stat-card pending">
+      <div class="stat-icon">⏳</div>
+      <div class="stat-info">
+        <h2 id="pendingComplaints">0</h2>
+        <p>Pending</p>
+      </div>
+    </div>
+
+    <div class="stat-card progress">
+      <div class="stat-icon">🔧</div>
+      <div class="stat-info">
+        <h2 id="progressComplaints">0</h2>
+        <p>In Progress</p>
+      </div>
+    </div>
+
+    <div class="stat-card resolved">
+      <div class="stat-icon">✅</div>
+      <div class="stat-info">
+        <h2 id="resolvedComplaints">0</h2>
+        <p>Resolved</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <a href="manage-complaints.html" class="action-card">
+      <span>📋</span>
+      <p>Manage Complaints</p>
+    </a>
+    <a href="manage-users.html" class="action-card">
+      <span>👥</span>
+      <p>Manage Users</p>
+    </a>
+    <a href="reports.html" class="action-card">
+      <span>📊</span>
+      <p>View Reports</p>
+    </a>
+    <a href="settings.html" class="action-card">
+      <span>⚙️</span>
+      <p>Settings</p>
+    </a>
+  </div>
+
+  <!-- Recent Complaints Table -->
+  <div class="table-container">
+
+    <div class="table-header">
+      <h2>Recent Complaints</h2>
+      <a href="manage-complaints.html" class="view-all-btn">View All →</a>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-state" id="loadingState">
+      <div class="spinner"></div>
+      <p>Loading complaints...</p>
+    </div>
+
+    <!-- Error State -->
+    <div class="error-state" id="errorState" style="display:none;">
+      <span>⚠️</span>
+      <p>Failed to load complaints. Please check your connection.</p>
+      <button onclick="retryLoad()">Retry</button>
+    </div>
+
+    <!-- Table -->
+    <div id="tableWrapper" style="display:none;">
+      <table>
+        <thead>
+          <tr>
+            <th>#ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="complaintsTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <h3>⚡ IssuePortal</h3>
+    <p>Smart Public Issue Reporting & Governance System</p>
+    <p>© 2026 IssuePortal. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Manage Users | IssuePortal</title>
+
+<link rel="stylesheet"
+      href="manage-users.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        IssuePortal Admin
+    </div>
+
+    <div class="nav-links">
+
+        <a href="admin-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="manage-complaints.html">
+            Complaints
+        </a>
+
+        <a href="manage-users.html">
+            Users
+        </a>
+
+        <a href="#" onclick="logout()">
+            Logout
+        </a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <div class="page-header">
+
+        <h1>Manage Users</h1>
+
+        <p>
+            View and manage registered users.
+        </p>
+
+    </div>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name or email">
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Role</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="usersTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    <h3>IssuePortal</h3>
+
+    <p>Smart Public Issue Reporting System</p>
+
+    <p>© 2026 IssuePortal</p>
+
+</footer>
+
+<script src="manage-users.js"></script>
+
+</body>
+</html>
